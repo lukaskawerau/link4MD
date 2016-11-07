@@ -33,14 +33,15 @@ export function activate(context: vscode.ExtensionContext) {
 		// Get the active editor
 		let editor = vscode.window.activeTextEditor;
 		let selectedText = "";
+		let selectedPosition;
 		if (editor) {
 			// Get the selected text
 			let selection = editor.selection;
 			selectedText = editor.document.getText(selection);
-		}
-            // Display a message box to the user
-            vscode.window.showInformationMessage('Hello World!' + selectedText);
-	
+		};
+			
+		
+  	
 	});
 
 	        if (workspace.rootPath === null){
@@ -54,16 +55,29 @@ export function activate(context: vscode.ExtensionContext) {
                 return { description: file.fsPath.substring(lengthToStripOff), label: getFileName(file.fsPath), filePath: file.fsPath };
             });
             window.showQuickPick(displayFiles).then(val=> {
-                workspace.openTextDocument(val.filePath).then(d=> {
-                    window.showTextDocument(d);
-                });
+                            vscode.window.showInformationMessage('Datei ausgewählt: ' + getFileName(val.label));
+
+			let edits = [
+			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, getFileName(val.label))
+			];
+
+			    // Insert the text
+			let uri = vscode.window.activeTextEditor.document.uri;
+			let edit = new vscode.WorkspaceEdit();
+			edit.set(uri, edits);
+			vscode.workspace.applyEdit(edit);
+
+			
+				//workspace.openTextDocument(val.filePath).then(d=> {
+                //    window.showTextDocument(d);
+                //});
             });
         });
     
 
-	context.subscriptions.push(disposable);
+	//context.subscriptions.push(disposable);
 }	
 
 // this method is called when your extension is deactivated
-export function deactivate() {
-}
+//export function deactivate() {
+//}

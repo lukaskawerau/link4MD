@@ -30,7 +30,7 @@
 				"properties": {
 					"findFiles.fileIncludeGlob": {
 						"type": "string",
-						"default": "**",
+						"default": "**.md",
 						"description": "A glob pattern that defines the files to search for."
 					},
 					"findFiles.fileExcludeGlob": {
