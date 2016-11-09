@@ -63,7 +63,7 @@ export function activate(context: vscode.ExtensionContext) {
 			
 
 			let edits = [
-			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, getFileName(val.label))
+			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, getFileName(val.label).substring(0, getFileName(val.label).length - 3))
 			];
 
 			    // Insert the text
