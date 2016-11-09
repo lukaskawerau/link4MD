@@ -58,12 +58,12 @@ export function activate(context: vscode.ExtensionContext) {
             });
             
 			window.showQuickPick(displayFiles).then(val=> {
-                vscode.window.showInformationMessage('Datei ausgewählt: ' + getFileName(val.label));
+                // vscode.window.showInformationMessage('Datei ausgewählt: ' + getFileName(val.label));
 			
 			
 
 			let edits = [
-			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, getFileName(val.label).substring(0, getFileName(val.label).length - 3))
+			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, '[[' + getFileName(val.label).substring(0, getFileName(val.label).length - 3) + ']]')
 			];
 
 			    // Insert the text
