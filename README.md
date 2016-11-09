@@ -1,65 +1,57 @@
-# wikilink4md README
+# wikilink4md
 
-This is the README for your extension "wikilink4md". After writing up a brief description, we recommend including the following sections.
 
-## Features
+provides the functions of this [Sublime plugin](https://github.com/dansheffler/MyWiki) as a extension in Visual studio code. 
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Supports WikiStyle [[]] Grammar for Files in the same folder
+- After typing [[ a list with all available files in folder pops up and you can choose the correct file. The selected file will be included between [[]].
+- After pressing Alt+Enter, If marked file is not existing, open new file and save it with the marked name
+- If marked file name is existing, open existing file.
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+## Hotkeys
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+STRG + Alt + l opens file selection of current folder and import selected filename
 
-## Requirements
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Settings
+You can configure the settings, to display a specific types of files and folders, or exclude specific files and folders.
+Similarly you could configure the number of files displayed.
 
-## Extension Settings
+```
+"properties": {
+  "findFiles.fileIncludeGlob": {
+    "type": "string",
+    "default": "**",
+    "description": "A glob pattern that defines the files to search for."
+  },
+  "findFiles.fileExcludeGlob": {
+    "type": "string",
+    "default": "**\\node_modules\\**",
+    "description": "A glob pattern that defines files and folders to exclude."
+  },
+  "findFiles.maxResults": {
+    "type": "number",
+    "default": 1000,
+    "description": "An upper-bound for the result."
+  }
+}
+```
+## Source
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+[Github](https://github.com/wangeleile/wikilink4md)
+        
+## Change Log
 
-For example:
+### Version 0.0.5
 
-This extension contributes the following settings:
+First running version, File selection is working.
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### Version 0.0.1
 
-## Known Issues
+V0.0.1 Nothing ready, just copied an extension which comes close to wished extension
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## License
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[MIT](https://raw.githubusercontent.com/DonJayamanne/listFilesVSCode/master/LICENSE)
