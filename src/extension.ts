@@ -28,34 +28,39 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	
 	var disposable = vscode.commands.registerCommand('extension.wikilink4md', () => {
+	
 		// The code you place here will be executed every time your command is executed
 
 		// Get the active editor
 		let editor = vscode.window.activeTextEditor;
 		let selectedText = "";
-		let selectedPosition;
+		let filename ="";
 		if (editor) {
 			// Get the selected text
 			let selection = editor.selection;
 			selectedText = editor.document.getText(selection);
 		};
-			
-		
-  	
-	});
+	
+	
 
 	        if (workspace.rootPath === null){
             return;
-        }
-        var config = workspace.getConfiguration("findFiles");
+        };
+        
+		var config = workspace.getConfiguration("findFiles");
         var lengthToStripOff = workspace.rootPath.length + 1;
+		
 
         workspace.findFiles(<string>config.get("fileIncludeGlob"), <string>config.get("fileExcludeGlob"), <number>config.get("maxResults")).then(files=> {
-            var displayFiles = files.map(file=> {
+            
+			var displayFiles = files.map(file=> {
                 return { description: file.fsPath.substring(lengthToStripOff), label: getFileName(file.fsPath), filePath: file.fsPath };
             });
-            window.showQuickPick(displayFiles).then(val=> {
-                            vscode.window.showInformationMessage('Datei ausgewählt: ' + getFileName(val.label));
+            
+			window.showQuickPick(displayFiles).then(val=> {
+                vscode.window.showInformationMessage('Datei ausgewählt: ' + getFileName(val.label));
+			
+			
 
 			let edits = [
 			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, getFileName(val.label))
@@ -73,11 +78,11 @@ export function activate(context: vscode.ExtensionContext) {
                 //});
             });
         });
-    
+    });
 
-	//context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable);
 }	
 
 // this method is called when your extension is deactivated
-//export function deactivate() {
-//}
+export function deactivate() {
+}
