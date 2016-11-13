@@ -2,7 +2,7 @@
     "name": "wikilink4md",
     "displayName": "wikilink4md",
     "description": "wikilinks in markdownfiles",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "wangeleile",
     "engines": {
         "vscode": "^1.5.0"

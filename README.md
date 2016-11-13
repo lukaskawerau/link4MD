@@ -4,9 +4,6 @@
 provides the functions of this [Sublime plugin](https://github.com/dansheffler/MyWiki) as a extension in Visual studio code. 
 
 - Supports WikiStyle [[]] Grammar for Files in the same folder
-- After typing [[ a list with all available files in folder pops up and you can choose the correct file. The selected file will be included between [[]].
-- After pressing Alt+Enter, If marked file is not existing, open new file and save it with the marked name
-- If marked file name is existing, open existing file.
 
 
 ## Hotkeys
@@ -44,7 +41,7 @@ Similarly you could configure the number of files displayed.
         
 ## Change Log
 
-### Version 0.0.5
+### Version 0.0.2
 
 First running version, File selection is working.
 
@@ -54,4 +51,4 @@ V0.0.1 Nothing ready, just copied an extension which comes close to wished exten
 
 ## License
 
-[MIT](https://raw.githubusercontent.com/DonJayamanne/listFilesVSCode/master/LICENSE)
+[MIT](https://wangeleile.mit-license.org/)
