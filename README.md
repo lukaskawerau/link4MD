@@ -29,11 +29,11 @@ ext install Link4MD
 
 ## Usage
 1. Move cursor to keyword, and click it.
-1. Ctrl+Shift+P / F1, input 'Link4MD'. Or use `alt + g`.
+1. Ctrl+Shift+P / F1, input 'link4md'. Or use `ctrl + shift + -`.
 
 ## Keyboard Shortcuts
 ```
-{ "command":"extension.quickOpenFile", "key":"alt+g" }
+{ "command":"extension.quickOpenFile", "key":"ctrl+shift+-" }
 ```
 This is default setting, you can override in your keyboard shortcuts.
 
@@ -62,8 +62,10 @@ Similarly you could configure the number of files displayed.
 ```
 
 ## ChangeLog
-- 0.1.0
-    - Change Wikilinks with MarkdownLinks
+- 0.2.0
+    - Change Wikilinks Format to Markdown Format
+    - Change default keybinding
+    - Add icon
 
 - 0.0.2
     - First working version, with some errors 

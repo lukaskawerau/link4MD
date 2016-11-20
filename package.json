@@ -4,6 +4,8 @@
     "description": "links in markdownfiles",
     "version": "0.2.0",
     "publisher": "wangeleile",
+    "license": "MIT",
+    "icon": "icon.gif",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -18,7 +20,7 @@
         "commands": [
             {
                 "command": "extension.Link4MD",
-                "title": "wikilink"
+                "title": "link4md"
             }
         ],
         "keybindings": [
