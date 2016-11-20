@@ -1,7 +1,7 @@
 {
-    "name": "wikilink4md",
-    "displayName": "wikilink4md",
-    "description": "wikilinks in markdownfiles",
+    "name": "Link4MD",
+    "displayName": "Link4MD",
+    "description": "links in markdownfiles",
     "version": "0.2.0",
     "publisher": "wangeleile",
     "engines": {
@@ -11,21 +11,21 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.wikilink4md"
+        "onCommand:extension.Link4MD"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.wikilink4md",
+                "command": "extension.Link4MD",
                 "title": "wikilink"
             }
         ],
         "keybindings": [
             {
-                "command": "extension.wikilink4md",
-                "key": "ctrl+alt+l",
-                "mac": "ctrl+alt+l"
+                "command": "extension.Link4MD",
+                "key": "ctrl+shift+-",
+                "mac": "ctrl+shift+-"
             }
         ],
         "configuration": {

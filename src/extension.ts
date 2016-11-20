@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "wikilink4md" is now active!');
+	console.log('Congratulations, your extension "Link4MD" is now active!');
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
 	
 	
-	var disposable = vscode.commands.registerCommand('extension.wikilink4md', () => {
+	var disposable = vscode.commands.registerCommand('extension.Link4MD', () => {
 	
 		// The code you place here will be executed every time your command is executed
 
@@ -63,14 +63,15 @@ export function activate(context: vscode.ExtensionContext) {
 			
 
 			let edits = [
-			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, '[[' + getFileName(val.label).substring(0, getFileName(val.label).length - 3) + ']]')
+			vscode.TextEdit.insert(vscode.window.activeTextEditor.selection.active, '[' + getFileName(val.label).substring(0, getFileName(val.label).length - 3) + '](' + val.label + ')')
 			];
-
+			
 			    // Insert the text
 			let uri = vscode.window.activeTextEditor.document.uri;
 			let edit = new vscode.WorkspaceEdit();
 			edit.set(uri, edits);
 			vscode.workspace.applyEdit(edit);
+			
 
 			
 				//workspace.openTextDocument(val.filePath).then(d=> {
