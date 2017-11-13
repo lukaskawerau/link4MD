@@ -1,6 +1,6 @@
-# Link4MD
+# zk4vsc
 
-This is a extension for quickly include file links in your markdown files.
+Zettelkasten Extension for Visual Studio Code
 
 <!-- TOC -->
 
@@ -17,14 +17,14 @@ This is a extension for quickly include file links in your markdown files.
 
 ## Features
 
-inspired by this [Sublime plugin](https://github.com/dansheffler/MyWiki) as a extension in Visual studio code.
+inspired by this [Sublime plugin](https://github.com/dansheffler/MyWiki) and [Sublime_zk](https://github.com/renerocksai/sublime_zk/blob/master/sublime_zk.py) as a extension in Visual studio code.
 
 - Allow implementation of links.
 - Markdown Link Structure
 
 ## Installation
 ```
-ext install Link4MD
+ext install zettelkasten4vsc
 ```
 
 ## Usage
@@ -63,19 +63,19 @@ Similarly you could configure the number of files displayed.
 
 ## ChangeLog
 - 0.2.0
-    - Change Wikilinks Format to Markdown Format
-    - Change default keybinding
-    - Add icon
+    - ...
+    - ...
+    - ...
 
 - 0.0.2
-    - First working version, with some errors 
+    - ...
 
 - 0.0.1
     - First Version
 
 ## License
-The package is Open Source Software released under the [MIT_License](https://wangeleile.mit-license.org/). It's developed by AlanWalk.
+The package is Open Source Software released under the [MIT_License](https://wangeleile.mit-license.org/). It's developed by wangeleile.
 
 ## Links
-- [Source Code](https://github.com/wangeleile/link4MD)
+- [Source Code](https://github.com/wangeleile/zk4vsc)
 - [Market](https://marketplace.visualstudio.com/items/)
